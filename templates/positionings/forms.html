@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Customer CSS commons.css -->
+    <link rel="stylesheet" href="../css/commons.css">
+</head>
+
+<body>
+    <!-- top menu -->
+    <nav>
+        <ul class="nav">
+            <li class="nav-item"><a href="/gadgets/buttons">buttons</a></li>
+            <li class="nav-item"><a href="/gadgets/cards">cards</a></li>
+            <li class="nav-item"><a href="/gadgets/colors">colors</a></li>  
+            <li class="nav-item"><a href="/gadgets/containers">containers</a></li>
+            <li class="nav-item"><a href="/positionings/forms">forms</a></li>
+            <li class="nav-item"><a href="/positionings/grids">grids</a></li>
+            <li class="nav-item"><a href="/positionings/standards">standards</a></li>  
+            <li class="nav-item"><a href="/positionings/tables">tables</a></li>        
+        </ul> 
+    </nav>
+    <nav>nav</nav>
+
+    <main>
+        <div>radio buttons</div>
+        <form action="./links.html" method="get">
+            <div>
+                연구소 이름 : <input type="text" name="lab_name" value="yojulab" id="">
+            </div>
+            <div>
+                <div>- 희망 사항 선택 -</div>
+                <div class="form-check">
+                    강아지 말 희망
+                    <input class="form-check-input" type="radio" name="hope_lang" value="dog_lang" id="">
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label" for="hopecatlang">고양이 말 희망</label>
+                    <input class="form-check-input" type="radio" name="hope_lang" value="cat_lang" id="hopecatlang">
+                </div>
+            </div>
+            <div>
+                <button type="submit">links로 정보 전달</button>
+                <button type="reset">같은 form 내 정보 재설정</button>
+            </div>  
+        </form>
+        <hr>
+        <!-- apply form-control with row and col -->
+        <div> apply form-control with row and col </div>
+        <div class="row">
+            <div class="col-3">
+                <input type="text" class="form-control-plaintext" placeholder="Email : ">
+            </div>
+            <div class="col-4">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">      
+            </div>
+            <div class="col-5">
+                <!-- select menu -->            
+                <label for="carcompanyname">Choose car company : </label>
+                <select class="form-select" name="car_company_name" id="carcompanyname">
+                    <option value="CAR_01">볼보</option>
+                    <option value="CAR_02" selected>현대</option>
+                    <option value="CAR_03">아우디</option>
+                    <option value="CAR_04">포르쉐</option>
+                </select>
+            </div>            
+        </div> 
+
+        <hr>
+
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">          
+        
+        <!-- apply form-control -->
+        <div> apply form-control </div>
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">  
+    </main>
+
+    <footer>footer</footer>
+</body>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
