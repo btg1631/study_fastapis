@@ -12,12 +12,19 @@
 
 <body>
     {% extends "main_template.html" %}
-    {% block main_container %}   
-    <main>main
+    
+    <main>
+        {% block main_container %}   
+        main
         <h2>homes/standards</h2>
+        {% endblock %}
     </main>
-    <footer>footer</footer>
-    {% endblock %}
+    <footer>
+        {% block footer %}
+        footer
+        {% endblock %}    
+    </footer>
+    
 
 </body>
 <!-- Latest compiled JavaScript -->
