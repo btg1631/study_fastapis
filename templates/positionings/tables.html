@@ -1,58 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tables</title>
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Customer CSS commons.css -->
-    <link rel="stylesheet" href="../css/commons.css">
-</head>
+{% extends "main_template.html" %}
 
-<body>
-  {% extends "main_template.html" %}
-    <nav>nav</nav>
-    <main class="container">
-      {% block main_container %}
-        <h2>Basic Table</h2>
-        <!-- <table class="table table-bordered"> 전체 다 -->
-        <table class="table table-hover table-bordered table-striped">
-          <thead>
-            <tr>
-              <th>Firstname</th>
-              <th>Lastname</th>
-              <th>Email</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>John</td>
-              <td>Doe</td>
-              <td>john@example.com</td>
-            </tr>
-            <tr>
-              <td>Mary</td>
-              <td>Moe</td>
-              <td>mary@example.com</td>
-            </tr>
-            <tr>
-              <td>July</td>
-              <td>Dooley</td>
-              <td>july@example.com</td>
-            </tr>
-          </tbody>
-        </table>
-        {% endblock %}
-    </main>
-    <footer>
-      {% block footer %}
-      footer
-      {% endblock %}    
-    </footer>
-    
-</body>
-<!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+{% block main_container %}
+  <h2>Basic Table</h2>
+  <!-- <table class="table table-bordered"> 전체 다 -->
+  <table class="table table-hover table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+{% endblock %}
 
-</html>
+{% block footer %}
+footer
+{% endblock %}    
