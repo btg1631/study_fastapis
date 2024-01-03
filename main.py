@@ -13,12 +13,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-from routes.homes import router as event_router
-from routes.gadgets import router as event_router1
-from routes.positionings import router as event_router2
-app.include_router(event_router, prefix="/home")
-app.include_router(event_router1, prefix="/gadgets")
-app.include_router(event_router2, prefix="/positionings")
+from routes.homes import router as homes_router
+from routes.gadgets import router as gadgets_router
+from routes.positionings import router as positionings_router
+from routes.users import router as users_router
+app.include_router(homes_router, prefix="/home")
+app.include_router(gadgets_router, prefix="/gadgets")
+app.include_router(positionings_router, prefix="/positionings")
+app.include_router(users_router, prefix="/users")
 
 
 from fastapi import Request
