@@ -1,12 +1,13 @@
 from fastapi import FastAPI
-
 app = FastAPI()
+
 from fastapi.middleware.cors import CORSMiddleware
 # No 'Access-Control-Allow-Origin'
 # CORS 설정
+## 실제 운영 환경에서는 접근 가능한 도메인만 허용하는 것이 좋습니다.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # 실제 운영 환경에서는 접근 가능한 도메인만 허용하는 것이 좋습니다.
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

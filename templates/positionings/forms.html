@@ -11,20 +11,10 @@
 </head>
 
 <body>
-    <!-- top menu -->
-    <nav>
-        <li class="nav-item"><a href="/">main</a></li>
-        <li class="nav-item"><a href="/gadgets/buttons">buttons</a></li>
-        <li class="nav-item"><a href="/gadgets/cards">cards</a></li>
-        <li class="nav-item"><a href="/gadgets/colors">colors</a></li>  
-        <li class="nav-item"><a href="/gadgets/containers">containers</a></li>
-        <li class="nav-item"><a href="/positionings/forms">forms</a></li>
-        <li class="nav-item"><a href="/positionings/grids">grids</a></li>
-        <li class="nav-item"><a href="/positionings/standards">standards</a></li>  
-        <li class="nav-item"><a href="/positionings/tables">tables</a></li>        
-    </nav>
-    <nav>nav</nav>
+    {% extends "main_template.html" %}
 
+    {% block main_container %}
+    <nav>nav</nav>
     <main>
         <div>radio buttons</div>
         <form action="./links.html" method="get">
@@ -79,8 +69,8 @@
         <label for="email">Email:</label>
         <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">  
     </main>
-
     <footer>footer</footer>
+    {% endblock %}
 </body>
 
 <!-- Latest compiled JavaScript -->
