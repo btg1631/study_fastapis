@@ -17,13 +17,15 @@ async def insert(request:Request):
 # 로그인 /users/insert -> users/login.html
 @router.post("/insert")
 async def login(request:Request):
-    print(dict(await request.form()))
+    datas = await request.form()
+    print(dict(datas))
     return templates.TemplateResponse("users/logins.html", context={'request':request})
 
 # 회원 리스트 /users/list -> users/lists.html
 @router.post("/list")
 async def list_post(request:Request):
-    print(dict(await request.form()))
+    datas = await request.form()
+    print(dict(datas))
     return templates.TemplateResponse("users/lists.html", context={'request':request})
 
 @router.get("/list")

@@ -21,8 +21,8 @@ async def buttons(request:Request):
 async def cards(request:Request):
     # request.query_params
     # QueryParams('name=youngji&email=waity0912%40gmail.com')
-    # dict(request.query_params)
-    # {'name': 'youngji', 'email': 'waity0912@gmail.com'}
+    ## dict(request.query_params)
+    ## {'name': 'youngji', 'email': 'waity0912@gmail.com'}
     return templates.TemplateResponse(name="gadgets/cards.html"
                                       , context={"request":request})
 # POST
@@ -32,8 +32,8 @@ async def cards_post(request:Request):
     # QueryParams('')
     # await request.form()
     # FormData([('name', 'youngji'), ('email', 'waity0912@gmail.com')])
-    # dict(await request.form())
-    # {'name': 'youngji', 'email': 'waity0912@gmail.com'}
+    ## dict(await request.form())
+    ## {'name': 'youngji', 'email': 'waity0912@gmail.com'}
     # form_datas = await request.form()
     # dict(form_datas)
     return templates.TemplateResponse(name="gadgets/cards.html"
