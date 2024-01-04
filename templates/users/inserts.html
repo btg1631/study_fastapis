@@ -38,11 +38,14 @@
                     <option>4</option>
                 </select>
             </div>
-            <div>
+            <div class="mb-3">
                 <label for="comment">Comments:</label>
                 <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <!-- 회원 가입 -->
+            <button type="submit" class="btn btn-primary" formaction="/users/insert">가입</button>
+            <!-- 홈으로 이동 -->
+            <button type="submit" class="btn btn-primary" formaction="/">취소</button>
         </form>
     </main>
     <footer>footer</footer>
