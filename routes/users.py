@@ -21,20 +21,19 @@ async def login(request:Request):
     return templates.TemplateResponse("users/logins.html", context={'request':request})
 
 # 회원 리스트 /users/list -> users/lists.html
-@router.get("/list")
-async def list_get(request:Request):
-    return templates.TemplateResponse("users/lists.html", context={'request':request})
-
 @router.post("/list")
 async def list_post(request:Request):
     print(dict(await request.form()))
+    return templates.TemplateResponse("users/lists.html", context={'request':request})
+
+@router.get("/list")
+async def list_get(request:Request):
     return templates.TemplateResponse("users/lists.html", context={'request':request})
 
 # 회원 상세정보 /users/read -> users/reads.html
 # Path parameters : /users/read/id or /users/read/unique_name
 @router.get("/read/{object_id}")
 async def read(request:Request, object_id:str):
-    print(dict(await request.form()))
     return templates.TemplateResponse("users/reads.html", context={'request':request})
 
 
