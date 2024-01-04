@@ -14,7 +14,7 @@
     <nav>nav</nav>
     <main class="container">
         <h2>로그인</h2>
-        <form>
+        <form action="" method="">
             <div class="mb-3 mt-3">
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -28,7 +28,7 @@
                 <input class="form-check-input" type="checkbox" name="remember"> Remember me
               </label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" formmethod="post" formaction="/users/list">Submit</button>
         </form>
     </main>
     <footer>footer</footer>

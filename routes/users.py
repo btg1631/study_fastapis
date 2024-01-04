@@ -12,11 +12,31 @@ templates = Jinja2Templates(directory = "templates/")
 # 회원가입 form /users/form -> users/inserts.html
 @router.get("/form")
 async def insert(request:Request):
-    return templates.TemplateResponse("users/inserts.html", {'request':request})
+    return templates.TemplateResponse("users/inserts.html", context={'request':request})
+
+# 로그인 /users/insert -> users/login.html
+@router.post("/insert")
+async def login(request:Request):
+    print(dict(await request.form()))
+    return templates.TemplateResponse("users/logins.html", context={'request':request})
+
+# 회원 리스트 /users/list -> users/lists.html
+@router.get("/list")
+async def list_get(request:Request):
+    return templates.TemplateResponse("users/lists.html", context={'request':request})
+
+@router.post("/list")
+async def list_post(request:Request):
+    print(dict(await request.form()))
+    return templates.TemplateResponse("users/lists.html", context={'request':request})
+
+# 회원 상세정보 /users/read -> users/reads.html
+# Path parameters : /users/read/id or /users/read/unique_name
+@router.get("/read/{object_id}")
+async def read(request:Request, object_id:str):
+    print(dict(await request.form()))
+    return templates.TemplateResponse("users/reads.html", context={'request':request})
 
 
-# 회원가입 /users/insert -> users/login.html
-@router.get("/insert")
-async def insert(request:Request):
-    pass
-    return templates.TemplateResponse("users/logins.html", {'request':request})
+# 지정 안해도 됨
+# async def insert(request, object_id):

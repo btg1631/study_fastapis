@@ -15,7 +15,7 @@
     <nav>nav</nav>
     <main class="container">
         <h2>회원 상세보기</h2>
-        <form>
+        <form action="" method="">
             <div class="mb-3 mt-3">
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -37,8 +37,8 @@
                 <label for="comment">Comments:</label>
                 <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">List</button>
-            <button type="submit" class="btn btn-danger">Delete</button>
+            <button type="submit" class="btn btn-primary" formmethod="get" formaction="/users/list">List</button>
+            <button type="submit" class="btn btn-danger" formmethod="post" formaction="/users/list">Delete</button>
         </form>
     </main>
     <footer>footer</footer>

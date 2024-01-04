@@ -15,7 +15,7 @@
     <nav>nav</nav>
     <main class="container">
         <h2>회원가입</h2>
-        <form>
+        <form action="" method="">
             <div class="mb-3 mt-3">
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
@@ -43,9 +43,9 @@
                 <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
             </div>
             <!-- 회원 가입 -->
-            <button type="submit" class="btn btn-primary" formaction="/users/insert">가입</button>
+            <button type="submit" class="btn btn-primary" formmethod="post" formaction="/users/insert">가입</button>
             <!-- 홈으로 이동 -->
-            <button type="submit" class="btn btn-primary" formaction="/">취소</button>
+            <button type="submit" class="btn btn-primary" formmethod="get" formaction="/">취소</button>
         </form>
     </main>
     <footer>footer</footer>

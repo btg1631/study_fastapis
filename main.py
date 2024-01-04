@@ -32,12 +32,12 @@ templates = Jinja2Templates(directory = "templates/")
 async def main(request:Request):
     # html 틀로 호출
     return templates.TemplateResponse("main.html"
-                                      , {'request':request})
+                                      , context={'request':request})
 
 
 @app.get("/index")
 async def index(request:Request):
     # html 틀로 호출
     return templates.TemplateResponse("index.html"
-                                      , {'request':request})
+                                      , context={'request':request})
     # return {"message": "Youngji World!"}
