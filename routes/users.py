@@ -38,6 +38,13 @@ async def list_get(request:Request):
 async def read(request:Request, object_id:str):
     return templates.TemplateResponse("users/reads.html", context={'request':request})
 
+# 회원 삭제 delete
+@router.post("/delete")
+async def delete(request:Request):
+    datas = await request.form()
+    print(dict(datas))
+    return templates.TemplateResponse("users/lists.html", context={'request':request})
+
 
 # 지정 안해도 됨
 # async def insert(request, object_id):
